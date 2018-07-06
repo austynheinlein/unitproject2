@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const Port = proces.env.Port || 3000
+const PORT = process.env.PORT || 3000
 
 //******** ROUTES ********//
 app.get('/', (req, res) => {
@@ -8,6 +8,6 @@ app.get('/', (req, res) => {
 })
 
 //listener
-app.listen(Port, () => {
+app.listen(PORT, () => {
   console.log("***LISTENING***");
 })
