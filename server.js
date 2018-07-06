@@ -5,9 +5,13 @@ const mongoose = require('mongoose')
 const mongoUri =  process.env.MONGODB_URI || 'mongodb://localhost:27017/grocery_app_dev';
 
 //******** ROUTES ********//
+// app.get('/', (req, res) => {
+//   res.send('this works')
+// })
+//get index
 app.get('/', (req, res) => {
-  res.send('this works')
-})
+    res.render('index.ejs');
+});
 
 //listener
 app.listen(PORT, () => {
