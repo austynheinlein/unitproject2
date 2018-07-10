@@ -9,8 +9,18 @@
     <h2>An Oyster Guide to the Puget Sound</h2>
     <nav>
             <ul>
-                <li><a href="/sessions/join">Log In</a></li>
-                <li><a href="/users/join">Register</a></li>
+
+                <li><a href="/users/new">Register</a></li>
+                <li><a href="/sessions/new">Log In</a></li>
+
+                <% if(currentUser) { %>
+                <li>
+                  <form action="/sessions?_method=DELETE" method="POST">
+                    <input type="submit" value="Logout"/>
+                  </form>
+                </li>
+                <% } %>
+                
             </ul>
         </nav>
     <hr>
