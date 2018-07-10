@@ -7,15 +7,20 @@
   <body>
     <h1>My Shucking Field Notes</h1>
     <h2>An Oyster Guide to the Puget Sound</h2>
+    <nav>
+            <ul>
+                <li><a href="/sessions/join">Log In</a></li>
+                <li><a href="/users/join">Register</a></li>
+            </ul>
+        </nav>
     <hr>
     </br>
     <ul>
-        <% for(let i = 0; i < oysters.length; i++){ %>
+        <% for(let i = 0; i < oyster.length; i++){ %>
             <li>
-                <a href="/oysters/<%=oysters[i].id%>">
-                  <%=oysters[i].name%>
+                <a href="/oysters/<%=oyster[i].id%>">
+                  <%=oyster[i].name%>
                 </a>
-
             </li>
         <% } %>
     </ul>

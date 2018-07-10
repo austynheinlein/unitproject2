@@ -22,7 +22,7 @@ router.get('/seed', (req, res) => {
         yearsToMaturity: 3,
         flavorProfile:['cucumber', 'dill', 'sweet', 'mild brininess']
       }
-    ]//end array
+    ],//end array
     (err, data) => {
       res.redirect('/oysters')
     }//end af
@@ -39,8 +39,10 @@ router.get('/new', (req, res) => {
 //get INDEX //////////////////////////////////////////////
 router.get('/', (req, res) => {
   Oyster.find({}, (err, allOysters) => {
+    console.log(err);
+    console.log(allOysters);
     res.render('index.ejs', {
-      oysters: allOysters
+      oyster: allOysters
     });
   })
 })
@@ -53,6 +55,13 @@ router.get('/:id/edit', (req, res) => {
         oyster: foundOyster
       }
     )
+  })
+})
+
+//update route
+router.put('/:id', (req, res) => {
+  Fruit.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel) => {
+    res.redirect('/oysters')
   })
 })
 

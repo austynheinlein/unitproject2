@@ -1,0 +1,8 @@
+const express = require('express');
+const router = express.Router();
+
+router.get('/join', (req, res) => {
+    res.render('users/join.ejs');
+});
+
+module.exports = router;

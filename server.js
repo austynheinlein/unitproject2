@@ -5,18 +5,14 @@ const mongoose = require('mongoose')
 const mongoUri =  process.env.MONGODB_URI || 'mongodb://localhost:27017/grocery_app_dev';
 const methodOverride = require('method-override')
 const oystersController = require('./controllers/oysters.js')
-
+const usersController = require('./controllers/users.js');
 
 
 //middleware
 app.use('/oysters', oystersController)
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended:false}));
-
-// GET INDEX
-app.get('/', (req, res) => {
-  res.render('index.ejs', {});
-});
+app.use('/users', usersController);
 
 //listener
 app.listen(PORT, () => {
