@@ -21,8 +21,19 @@ app.use(session({
     saveUninitialized: false
 }));
 
+//create a model with a creator
+app.post('/articles', (req, res)=>{
+    req.body.author = req.session.currentUser.username;
+    Article.create(req.body, (err, createdArticle)=>{
+        res.redirect('/articles');
+    });
+});
 
-
+app.get('/', (req, res)=>{
+    res.render('index.ejs', {
+        currentUser: req.session.currentUser
+    });
+});
 
 //listener
 app.listen(PORT, () => {

@@ -20,11 +20,18 @@
                   </form>
                 </li>
                 <% } %>
-                
+
             </ul>
         </nav>
     <hr>
     </br>
+    <p>
+    <% if(currentUser) { %>
+        Welcome <%=currentUser.username%>!
+    <% } else { %>
+        Welcome!
+    <% } %>
+  </p>
     <ul>
         <% for(let i = 0; i < oyster.length; i++){ %>
             <li>
