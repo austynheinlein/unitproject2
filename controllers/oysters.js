@@ -66,7 +66,7 @@ router.get('/:id/edit', (req, res) => {
 
 //update route
 router.put('/:id', (req, res) => {
-  Fruit.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel) => {
+  Oyster.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel) => {
     res.redirect('/oysters')
   })
 })

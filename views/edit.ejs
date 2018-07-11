@@ -7,7 +7,7 @@
   <body>
     <h1>Edit Field Notes</h1>
 
-    <form action="/oysters<%=oyster.id%>?_method=PUT" method="POST">
+    <form action="/oysters/<%=oyster.id%>?_method=PUT" method="POST">
           Name: <input type="text" name="name" value="<%oyster.name%>"><br/>
           yearsToMaturity: <input type="text" name="years" value="<%oyster.yearsToMaturity%>"><br/>
           Location: <input type="text" name="location" value="<%oyster.location%>"><br/>
