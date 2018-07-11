@@ -8,25 +8,25 @@ router.get('/seed', (req, res) => {
         name:'Pacific',
         location:'Puget Sound',
         yearsToMaturity: 2,
-        flavorProfile:['fruity', 'sweet', 'mild brininess']
+        flavorProfile:'Fruity, Sweet, Mild Brininess'
       },
       {
         name:'Olympia',
         location:'Totten Inlet',
         yearsToMaturity: 4,
-        flavorProfile:['coppery', 'high brininess']
+        flavorProfile:'Coppery, High Brininess'
       },
       {
         name:'Kumamoto',
         location:'Hammersley Inlet',
         yearsToMaturity: 3,
-        flavorProfile:['cucumber', 'dill', 'sweet', 'mild brininess']
+        flavorProfile:'Cucumber, Dill, Sweet, Mild brininess'
       },
       {
         name:'Shigoku',
         location:'Willapa Bay',
         yearsToMaturity: 2,
-        flavorProfile:['sweet', 'cucumber', 'medium brininess']
+        flavorProfile:'Sweet, Melon, Medium Brininess'
       }
     ],//end array
     (err, data) => {
@@ -36,6 +36,12 @@ router.get('/seed', (req, res) => {
 })//end route
 
 //************************ ROUTES ***************************//
+//post CREATE //////////////////////////////////////////////
+router.post('/', (req, res) => {
+  Oyster.create(req.body, (err, createdOyster) => {
+    res.redirect('/oysters')
+  })
+})
 
 // get NEW //////////////////////////////////////////////
 router.get('/new', (req, res) => {

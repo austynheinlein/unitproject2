@@ -9,9 +9,12 @@
 
     <form action="/oysters/<%=oyster.id%>?_method=PUT" method="POST">
           Name: <input type="text" name="name" value="<%oyster.name%>"><br/>
-          yearsToMaturity: <input type="text" name="years" value="<%oyster.yearsToMaturity%>"><br/>
+          Years To Maturity: <input type="text" name="years" value="<%oyster.yearsToMaturity%>"><br/>
           Location: <input type="text" name="location" value="<%oyster.location%>"><br/>
+          Flavor Profile:<input type="textbox" name="flavors" /><br/>
+
           <input type="submit" value="Submit Changes">
+
         </form>
 
   </body>
