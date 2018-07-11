@@ -10,16 +10,18 @@ const sessionsController = require('./controllers/sessions.js');
 const session = require('express-session');
 
 //middleware
-app.use('/oysters', oystersController)
+app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended:false}));
-app.use('/users', usersController);
-app.use('/sessions', sessionsController);
 app.use(session({
     secret: "feedmeseymour", //some random string
     resave: false,
     saveUninitialized: false
 }));
+app.use('/sessions', sessionsController);
+app.use('/oysters', oystersController)
+app.use('/users', usersController);
+
 
 //create a model with a creator
 app.post('/articles', (req, res)=>{

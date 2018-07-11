@@ -38,15 +38,11 @@ router.get('/new', (req, res) => {
 
 //get INDEX //////////////////////////////////////////////
 router.get('/', (req, res) => {
+  console.log(req.session);
   Oyster.find({}, (err, allOysters) => {
-    console.log(err);
-    console.log(allOysters);
     res.render('index.ejs', {
       oyster: allOysters,
-      currentUser:
-        req.sessions !== undefined ?
-        req.sessions.currentUser :
-        undefined
+      currentUser: req.session.currentUser
     });
   })
 })
@@ -71,9 +67,7 @@ router.put('/:id', (req, res) => {
 
 //DELETE //////////////////////////////////////////////
 router.delete('/:id', (req, res) => {
-  console.log("*******");
   Oyster.findByIdAndRemove(req.params.id, (err, data) => {
-    console.log("*******");
     res.redirect('/oysters')
   })
 })

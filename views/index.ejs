@@ -3,47 +3,59 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500|IM+Fell+English+SC" rel="stylesheet">
   </head>
   <body>
-    <h1>My Shucking Field Notes</h1>
-    <h2>An Oyster Guide to the Puget Sound</h2>
-    <nav>
-            <ul>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <h1>My Shucking Field Notes</h1>
+          <h2>An Oyster Guide to the Puget Sound</h2>
+        </div>
+        <div class="buttons">
+          <nav>
+              <ul>
+                  <li><a href="/users/new">Register</a></li>
+                  <li><a href="/sessions/new">Log In</a></li>
 
-                <li><a href="/users/new">Register</a></li>
-                <li><a href="/sessions/new">Log In</a></li>
+                  <% if(currentUser) { %>
+                  <li>
+                    <form action="/sessions?_method=DELETE" method="POST">
+                      <input type="submit" value="Logout"/>
+                    </form>
+                  </li>
+                  <% } %>
+              </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="main">
+        <div class="welcome">
+          <p>
+            <% if(currentUser) { %>
+              Hey, <%=currentUser.username%>!
+            <% } else { %>
+              Hey, Shucker!
+            <% } %>
+          </p>
+        </div>
+        <div class="list">
+          <ul>
+              <% for(let i = 0; i < oyster.length; i++){ %>
+                  <li>
+                      <a href="/oysters/<%=oyster[i].id%>">
+                        <%=oyster[i].name%>
+                      </a>
+                  </li>
+              <% } %>
+          </ul>
+        </div>
 
-                <% if(currentUser) { %>
-                <li>
-                  <form action="/sessions?_method=DELETE" method="POST">
-                    <input type="submit" value="Logout"/>
-                  </form>
-                </li>
-                <% } %>
-
-            </ul>
-        </nav>
-    <hr>
-    </br>
-    <p>
-    <% if(currentUser) { %>
-        Welcome <%=currentUser.username%>!
-    <% } else { %>
-        Welcome!
-    <% } %>
-  </p>
-    <ul>
-        <% for(let i = 0; i < oyster.length; i++){ %>
-            <li>
-                <a href="/oysters/<%=oyster[i].id%>">
-                  <%=oyster[i].name%>
-                </a>
-            </li>
-        <% } %>
-    </ul>
-    <nav>
-        <a href="/oysters/new">Add an Oyster Finding!</a>
-    </nav>
-
+          <nav>
+              <a class="create" href="/oysters/new">Add an Oyster Finding!</a>
+          </nav>
+      </div>
+    </div>
   </body>
 </html>

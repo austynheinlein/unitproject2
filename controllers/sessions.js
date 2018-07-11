@@ -13,14 +13,14 @@ router.get('/new', (req, res) => {
 //CREATE
 router.post('/', (req, res)=>{
     User.findOne({ username: req.body.username }, (err, foundUser) => {
-        if(req.body.password == foundUser.password){
-            // req.session.currentUser = foundUser;
-            // res.redirect('/oysters');
-            console.log(req);
-            res.send('LOGIN')
-        } else {
-            res.send('wrong password');
-        }
+      console.log(req.body);
+      console.log(foundUser);
+      if( bcrypt.compareSync(req.body.password, foundUser.password) ){
+        req.session.currentUser = foundUser;
+        res.redirect('/oysters');
+               } else {
+                   res.send('wrong password');
+               }
     });
 });
 
@@ -30,18 +30,6 @@ router.delete('/', (req, res) => {
         res.redirect('/oysters');
     });
 })
-
-//COMPARE PASSWORD ON LOGIN
-// router.post('/', (req, res)=>{
-//     User.findOne({ username: req.body.username },(err, foundUser) => {
-//         if( bcrypt.compareSync(req.body.password, foundUser.password) ){
-//             req.session.currentUser = foundUser;
-//             res.redirect('/oysters');
-//         } else {
-//             res.send('wrong password');
-//         }
-//     });
-// });
 
 
 module.exports = router;
