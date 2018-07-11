@@ -132,7 +132,7 @@ ul {
 .oyster:hover {
   background: #ff9191;
   cursor: pointer;
-  border: 3px solid #3a3a3a;
+  border: 3px solid #51ccab;
 
 }
 .oyster a {
@@ -155,6 +155,7 @@ ul {
 .welcome {
   margin: 0px;
   width: 100%;
+  border-top: 7px solid #51ccab;
   border-bottom: 7px solid #51ccab;
   background-image: url('/images/oyster-banner.jpg');
   background-size: cover;
