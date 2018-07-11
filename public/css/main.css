@@ -12,6 +12,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 .header {
@@ -19,6 +20,8 @@ body {
   flex-direction: row;
   justify-content: space-between;
   background: #3a3a3a;
+  margin: 0px;
+  width: 100%;
 }
 .logo {
   display: flex;
@@ -30,46 +33,138 @@ body {
 }
 .buttons {
   display: flex;
-  background-color: #3a3a3a;
-  padding-right: 10px;
+  background-color:#f76262;
+  padding-right: 13px;
+  padding-left: 13px;
 }
 nav a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 nav a:hover {
-  color: #f76262
+  color: #51ccab;
+}
+nav li {
+  padding-top: 10px;
 }
 .create {
+  display: flex;
   color: #3a3a3a;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background: #efefef;
+  font-size: 20px;
+  padding: 40px;
+  border: 3px solid #51ccab;
+}
+.create:hover {
+  color: #f96b6b;
+  border: 3px solid #f96b6b;
 }
 h1 {
   font-size: 50px;
   font-family: 'IM Fell English SC', serif;
   font-weight: lighter;
-  margin-bottom: 0;
+  margin-bottom: 8px;
+  padding: 10px;
+  border: 3px solid white;
 }
 h2 {
-  font-size: 26px;
-  margin-top: 8px;
+  font-size: 30px;
+  margin-top: 14px;
   font-weight: lighter;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  margin-left: 18px;
+}
+.icon {
+  display: flex;
+  flex-direction: row;
+}
+.oyster-png {
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+  margin-left: 30px;
 }
 ul {
+  display: flex;
   list-style-type: none;
   padding-left: 0px;
+  flex-direction: column;
+}
+.oysters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.oyster {
+  width: 135px;
+  height: 65px;
+  margin: 15px;
+  background: #f76262;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.oyster:hover {
+  background: #ff9191;
+  cursor: pointer;
+}
+.oyster a {
+  text-decoration: none;
+  color: white;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 20px;
+}
+.oyster a:hover {
+  color: #3a3a3a;
 }
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 .welcome {
-  margin: 20px;
-  font-weight: bold;
-  color: #3a3a3a;
+  margin: 0px;
+  width: 100%;
+  border-bottom: 7px solid #51ccab;
+}
+.shucker {
+  color: #f76262;
+  background-image: url('images/oyster-banner.jpg');
   font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.shucker p {
+  border: 1px solid #51ccab;
+  width: 200px;
+  background: rgba(225,225,225,.5);
+  padding: 15px;
 }
 .list {
-
+ padding: 10px;
+}
+h3 {
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+h3 a {
+  text-decoration: none;
+  color: #f76262;
+}
+.footer {
+  margin: 0;
+  width: 100%;
+  background-color: #3a3a3a;
+  border-top: 7px solid #51ccab;
 }

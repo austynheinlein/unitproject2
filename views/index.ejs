@@ -11,7 +11,10 @@
       <div class="header">
         <div class="logo">
           <h1>My Shucking Field Notes</h1>
-          <h2>An Oyster Guide to the Puget Sound</h2>
+          <div class="icon">
+            <h2>An Oyster Guide to the Puget Sound</h2>
+            <img class="oyster-png" src="images/oyster.png" alt="oyster">
+          </div>
         </div>
         <div class="buttons">
           <nav>
@@ -32,18 +35,20 @@
       </div>
       <div class="main">
         <div class="welcome">
-          <p>
-            <% if(currentUser) { %>
-              Hey, <%=currentUser.username%>!
-            <% } else { %>
-              Hey, Shucker!
-            <% } %>
-          </p>
+          <div class="shucker">
+            <p>
+              <% if(currentUser) { %>
+                Hey, <%=currentUser.username%>!
+              <% } else { %>
+                Hey, Shucker!
+              <% } %>
+            </p>
+          </div>
         </div>
         <div class="list">
-          <ul>
+          <ul class="oysters">
               <% for(let i = 0; i < oyster.length; i++){ %>
-                  <li>
+                  <li class="oyster">
                       <a href="/oysters/<%=oyster[i].id%>">
                         <%=oyster[i].name%>
                       </a>
@@ -55,6 +60,9 @@
           <nav>
               <a class="create" href="/oysters/new">Add an Oyster Finding!</a>
           </nav>
+      </div>
+      <div class="footer">
+        <h3>Crafted by <a href="https://www.linkedin.com/in/austynheinlein/">Austyn Heinlein</a></h3>
       </div>
     </div>
   </body>
