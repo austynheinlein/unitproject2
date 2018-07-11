@@ -4,14 +4,25 @@ body {
   border: 3px solid #3a3a3a;
   font-size: 18px;
 }
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #51ccab;
+  border-bottom: 3px solid #3a3a3a;
+  align-items: center;
+}
+.oyster-png {
+  height: 100px;
+  width: 100px;
+  margin-right: 40px;
+}
 h1 {
   font-size: 50px;
   font-family: 'IM Fell English SC', serif;
   font-weight: lighter;
-  background: #51ccab;
   padding: 20px;
   margin: 0;
-  border-bottom: 3px solid #3a3a3a;
 }
 .main {
   margin: 20px;

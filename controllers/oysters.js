@@ -8,25 +8,25 @@ router.get('/seed', (req, res) => {
         name:'Pacific',
         location:'Puget Sound',
         yearsToMaturity: 2,
-        flavorProfile:'Fruity, Sweet, Mild Brininess'
+        flavors:'Fruity, Sweet, Mild Brininess'
       },
       {
         name:'Olympia',
         location:'Totten Inlet',
         yearsToMaturity: 4,
-        flavorProfile:'Coppery, High Brininess'
+        flavors:'Coppery, High Brininess'
       },
       {
         name:'Kumamoto',
         location:'Hammersley Inlet',
         yearsToMaturity: 3,
-        flavorProfile:'Cucumber, Dill, Sweet, Mild brininess'
+        flavors:'Cucumber, Dill, Sweet, Mild brininess'
       },
       {
         name:'Shigoku',
         location:'Willapa Bay',
         yearsToMaturity: 2,
-        flavorProfile:'Sweet, Melon, Medium Brininess'
+        flavors:'Sweet, Melon, Medium Brininess'
       }
     ],//end array
     (err, data) => {
