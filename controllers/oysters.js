@@ -21,6 +21,12 @@ router.get('/seed', (req, res) => {
         location:'Hammersley Inlet',
         yearsToMaturity: 3,
         flavorProfile:['cucumber', 'dill', 'sweet', 'mild brininess']
+      },
+      {
+        name:'Shigoku',
+        location:'Willapa Bay',
+        yearsToMaturity: 2,
+        flavorProfile:['sweet', 'cucumber', 'medium brininess']
       }
     ],//end array
     (err, data) => {

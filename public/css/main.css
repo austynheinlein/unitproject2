@@ -37,10 +37,27 @@ body {
   padding-right: 13px;
   padding-left: 13px;
 }
+.buttons ul {
+  border: none;
+}
+input[type=submit]{
+  background: #f76262;
+  font-family: 'Cormorant Garamond', serif;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding-left: 0px;
+  font-weight: bold;
+  cursor: pointer;
+}
+input[type=submit]:hover{
+  color: #51ccab;
+}
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
 }
 nav a:hover {
   color: #51ccab;
@@ -69,6 +86,7 @@ h1 {
   margin-bottom: 8px;
   padding: 10px;
   border: 3px solid white;
+  text-align: center;
 }
 h2 {
   font-size: 30px;
@@ -82,16 +100,16 @@ h2 {
   flex-direction: row;
 }
 .oyster-png {
-  height: 50px;
-  width: 50px;
-  border: 1px solid white;
-  margin-left: 30px;
+  height: 70px;
+  width: 70px;
+  margin-left: 40px;
 }
 ul {
   display: flex;
   list-style-type: none;
-  padding-left: 0px;
+  padding: 15px;
   flex-direction: column;
+  border: 7px solid #3a3a3a;
 }
 .oysters {
   display: flex;
@@ -101,9 +119,10 @@ ul {
 }
 .oyster {
   width: 135px;
-  height: 65px;
-  margin: 15px;
+  height: 135px;
+  margin: 7px;
   background: #f76262;
+  border: 3px solid #f76262;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -112,6 +131,8 @@ ul {
 .oyster:hover {
   background: #ff9191;
   cursor: pointer;
+  border: 3px solid #3a3a3a;
+
 }
 .oyster a {
   text-decoration: none;
@@ -128,15 +149,16 @@ ul {
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
+  max-width: 800px;
 }
 .welcome {
   margin: 0px;
   width: 100%;
   border-bottom: 7px solid #51ccab;
+  background-image: url('oyster-banner.jpg');
 }
 .shucker {
-  color: #f76262;
-  background-image: url('images/oyster-banner.jpg');
+  color: #3a3a3a;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
@@ -145,14 +167,12 @@ ul {
   justify-content: center;
 }
 .shucker p {
-  border: 1px solid #51ccab;
+  border: 3px solid #51ccab;
   width: 200px;
   background: rgba(225,225,225,.5);
   padding: 15px;
 }
-.list {
- padding: 10px;
-}
+
 h3 {
   padding: 20px;
   color: white;
