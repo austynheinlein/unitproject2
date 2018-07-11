@@ -5,7 +5,7 @@ const oysterSchema = new mongoose.Schema({
     image:String,
     location:String,
     yearsToMaturity: Number,
-    flavorProfile: String
+    flavors: String
 });
 
 const Oyster = mongoose.model('Oyster', oysterSchema);

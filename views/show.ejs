@@ -3,25 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/css/show.css">
+    <link rel="image" href="/images/oyster-banner.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500|IM+Fell+English+SC" rel="stylesheet">
   </head>
   <body>
     <h1><%=oyster.name%></h1>
+    <div class="main">
+      <div class="properties">
+        The <%=oyster.name%> takes around <%=oyster.yearsToMaturity%> years to mature.
+      </div>
+      <div class="properties">
+        Their primary location is <%=oyster.location%>.
+      </div>
+      <div class="properties">
+        Flavor Profile: <%=oyster.flavors%>
+      </div>
+    </div>
 
-    The <%=oyster.name%> takes around <%=oyster.yearsToMaturity%> years to mature.</br>
+    <div class="buttons">
+      <form action="/oysters/<%=oyster.id%>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE">
+      </form>
 
-    Their primary location is <%=oyster.location%></br>
+      <a href="/oysters/<%=oyster.id%>/edit">EDIT</a>
 
-    Flavor Profile: <%=oyster.flavorProfile%>
-
-    </br>
-
-    <form action="/oysters/<%=oyster.id%>?_method=DELETE" method="POST">
-      <input type="submit" value="DELETE">
-    </form>
-
-    <a href="/oysters/<%=oyster.id%>/edit">EDIT</a>
-
-    <a href="/oysters">BACK</a>
+      <a href="/oysters">BACK</a>
+    </div>
 
   </body>
 </html>

@@ -38,7 +38,9 @@ router.get('/seed', (req, res) => {
 //************************ ROUTES ***************************//
 //post CREATE //////////////////////////////////////////////
 router.post('/', (req, res) => {
+  console.log(req.body);
   Oyster.create(req.body, (err, createdOyster) => {
+    console.log(createdOyster);
     res.redirect('/oysters')
   })
 })
@@ -72,6 +74,9 @@ router.get('/:id/edit', (req, res) => {
 
 //update route
 router.put('/:id', (req, res) => {
+  console.log('=====');
+  console.log(req.body);
+  console.log('=====');
   Oyster.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel) => {
     res.redirect('/oysters')
   })

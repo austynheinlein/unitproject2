@@ -1,0 +1,51 @@
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  border: 3px solid #3a3a3a;
+  font-size: 18px;
+}
+h1 {
+  font-size: 50px;
+  font-family: 'IM Fell English SC', serif;
+  font-weight: lighter;
+  background: #51ccab;
+  padding: 20px;
+  margin: 0;
+  border-bottom: 3px solid #3a3a3a;
+}
+.main {
+  margin: 20px;
+}
+.properties {
+  margin: 5px;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 15px;
+  background: #3a3a3a;
+  color: #51ccab;
+  margin: 5px;
+  border: 2px solid #51ccab;
+}
+input[type=submit]{
+  border: none;
+  font-family: 'Cormorant Garamond', serif;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  background: #3a3a3a;
+  color: #51ccab;
+  margin: 5px;
+  border: 2px solid #51ccab;
+}
+a:hover, input[type=submit]:hover{
+  background: #f96b6b;
+  border: 2px solid #3a3a3a;
+  color: #3a3a3a;
+}
