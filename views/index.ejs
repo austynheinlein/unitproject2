@@ -59,7 +59,12 @@
         </div>
 
           <nav>
+            <% if(currentUser) { %>
               <a class="create" href="/oysters/new">Add an Oyster Finding!</a>
+            <% } else { %>
+              <a class="create" href="/users/new">Hey Shucker, you gotta register to contribute your oyster findings.</a>
+            <% } %>
+
           </nav>
       </div>
       <div class="footer">
