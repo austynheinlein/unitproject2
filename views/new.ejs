@@ -3,16 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/css/show.css">
+    <link rel="image" href="/images/oyster-banner.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500|IM+Fell+English+SC" rel="stylesheet">
+  </head>
   </head>
   <body>
-    <h1>Add New Findings</h1>
-    <form action="/oysters" method="POST">
-            Name: <input type="text" name="name" /><br/>
-            Years To Maturity: <input type="text" name="yearsToMaturity" /><br/>
-            Location: <input type="text" name="location" /><br/>
-            Flavor Profile:<input type="textbox" name="flavors" /><br/>
+    <div class="header">
+      <h1>Add New Findings</h1>
+      <img class="oyster-png" src="/images/oyster.png" alt="oyster">
+    </div>
 
-            <input type="submit" value="Create New Oyster" />
-        </form>
+    <div class="main">
+      <form action="/oysters" method="POST">
+              Name: <input type="text" name="name" /><br/>
+              Years To Maturity: <input type="text" name="yearsToMaturity" /><br/>
+              Location: <input type="text" name="location" /><br/>
+              Flavor Profile:<input type="textbox" name="flavors" /><br/>
+
+              <input type="submit" value="Create New Oyster" />
+          </form>
+    </div>
+
   </body>
 </html>

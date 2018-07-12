@@ -3,13 +3,21 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link rel="stylesheet" href="/css/show.css">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500|IM+Fell+English+SC" rel="stylesheet">
     </head>
     <body>
+      <div class="header">
         <h1>Sign In</h1>
+        <img class="oyster-png" src="/images/oyster.png" alt="oyster">
+      </div>
+      <div class="main">
         <form action="/sessions" method="POST">
-            <input type="text" name="username" placeholder="username"/>
-            <input type="password" name="password" />
+            <input class="type" type="text" name="username" placeholder="username"/>
+            <input class="type" type="password" name="password" placeholder="password"/>
             <input type="submit" value="Log In" />
         </form>
+      </div>
+
     </body>
 </html>
